@@ -97,7 +97,6 @@ var Engine = (function(global) {
         //player.update();
     }
 
-	
 	///
 	
 	
@@ -160,13 +159,7 @@ var Engine = (function(global) {
 
         //player.render();
 		
-		
-		
-		
-		
-		
-		
-		
+	
 		
     }
 

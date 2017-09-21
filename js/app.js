@@ -70,5 +70,8 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-var allEnemies = [new Enemy(20,20),new Enemy(1,90),new Enemy(30,400),new Enemy(6,200),new Enemy(1,300)];
+var allEnemies = [new Enemy(30,50),new Enemy(1,150),new Enemy(30,320),new Enemy(6,220)];
+
+
+
 
