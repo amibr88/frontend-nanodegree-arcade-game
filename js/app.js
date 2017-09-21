@@ -1,5 +1,18 @@
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
+
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(x,y) {
+	
+	this.x=x
+	this.y=y
+	
+	
+	
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
@@ -11,6 +24,18 @@ var Enemy = function() {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
+	
+	this.x=this.x+3
+	if (this.x>ctx.canvas.width){
+		
+		//this.x=getRandomInt(0,100)*-1
+			
+		this.x=getRandomInt(0,100)*-3
+	}
+	
+	//الحركه
+	
+	
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -44,3 +69,6 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+var allEnemies = [new Enemy(20,20),new Enemy(1,90),new Enemy(30,400),new Enemy(6,200),new Enemy(1,300)];
+

@@ -94,9 +94,14 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        player.update();
+        //player.update();
     }
 
+	
+	///
+	
+	
+	
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
      * game tick (or loop of the game engine) because that's how games work -
@@ -107,6 +112,8 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
+		// الكانفس
+		
         var rowImages = [
                 'images/water-block.png',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 3 of stone
@@ -151,7 +158,16 @@ var Engine = (function(global) {
             enemy.render();
         });
 
-        player.render();
+        //player.render();
+		
+		
+		
+		
+		
+		
+		
+		
+		
     }
 
     /* This function does nothing but it could have been a good place to
