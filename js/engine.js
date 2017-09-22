@@ -157,7 +157,7 @@ var Engine = (function(global) {
             enemy.render();
         });
 
-        Player.render();
+        allPlayer.render();
 		
 	
 		

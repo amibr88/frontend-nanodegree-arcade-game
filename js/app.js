@@ -81,8 +81,7 @@ var allEnemies = [new Enemy(30,50),new Enemy(1,150),new Enemy(30,320),new Enemy(
 
 
 
-////
-
+////Player
 
 
 
@@ -91,8 +90,8 @@ var allEnemies = [new Enemy(30,50),new Enemy(1,150),new Enemy(30,320),new Enemy(
 
 var Player = function() {
 	
-	this.x=3
-	this.y=4
+	this.x=20
+	this.y=50
 	
     this.sprite = 'images/char-boy.png';
 };
@@ -100,21 +99,14 @@ var Player = function() {
 Player.prototype.update = function(dt) {
 	
 	this.x=this.x+3
-	if (this.x>ctx.canvas.width){
-		
-	this.x=getRandomInt(0,100)*-1
+	//if (this.x>ctx.canvas.width){
 			
-	this.x=getRandomInt(0,100)*-3
-	}
-	
-
-	
-
+	//this.x=getRandomInt(0,100)*-3
+	//}
 };
 
-// Draw the enemy on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-var allPlayer = [new Player()];
+var Player = new Player();
 
