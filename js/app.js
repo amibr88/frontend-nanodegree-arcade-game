@@ -73,34 +73,18 @@ document.addEventListener('keyup', function(e) {
 var allEnemies = [new Enemy(30,50),new Enemy(1,150),new Enemy(30,320),new Enemy(6,220)];
 
 
-
-
-
-
-
-
-
-
 ////Player
-
-
-
-
-
 
 var Player = function() {
 	
-	this.x=20
-	this.y=50
-	
+	this.x=400
+	this.y=400
     this.sprite = 'images/char-boy.png';
 };
 
-Player.prototype.update = function(dt) {
-	
+Player.prototype.update = function(dt) {	
 	this.x=this.x+3
-	//if (this.x>ctx.canvas.width){
-			
+	//if (this.x>ctx.canvas.width){		
 	//this.x=getRandomInt(0,100)*-3
 	//}
 };
