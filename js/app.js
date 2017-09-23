@@ -66,7 +66,7 @@ document.addEventListener('keyup', function(e) {
         39: 'right',
         40: 'down'
     };
-
+	
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
@@ -77,8 +77,8 @@ var allEnemies = [new Enemy(30,50),new Enemy(1,150),new Enemy(30,320),new Enemy(
 
 var Player = function() {
 	
-	this.x=400
-	this.y=400
+	this.x=250
+	this.y=420
     this.sprite = 'images/char-boy.png';
 };
 
