@@ -19,6 +19,8 @@ var Enemy = function(x,y) {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
+	this.width=50
+	this.height=50
 };
 
 // Update the enemy's position, required method for game
@@ -33,6 +35,7 @@ Enemy.prototype.update = function(dt) {
 		this.x=getRandomInt(0,100)*-3
 	}
 	
+	this.checkCollisions();
 	//الحركه
 	
 	
@@ -40,6 +43,22 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 };
+
+
+Enemy.prototype.checkCollisions = function() {
+	
+	if (this.x < player.x + player.width &&
+   this.x + this.width > player.x &&
+   this.y < player.y + player.height &&
+   this.height + this.y > player.y) {
+		alert("you lose")
+		player.reset();
+		
+	}
+
+}
+	
+
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
@@ -80,17 +99,57 @@ var Player = function() {
 	this.x=250
 	this.y=420
     this.sprite = 'images/char-boy.png';
+	this.width=50
+	this.height=50
+	
+	
+	/////fix
 };
 
-Player.prototype.update = function(dt) {	
-	this.x=this.x+3
+Player.prototype.update = function(dt) {
+	
+	if (this.y < 10) {
+			alert("congratiolations you win")
+		this.reset();
+	}
+	//this.x=this.x+3
 	//if (this.x>ctx.canvas.width){		
 	//this.x=getRandomInt(0,100)*-3
 	//}
 };
 
+Player.prototype.handleInput = function(directions) {	
+	if (directions=="up"){
+		
+		this.y -=83;
+	}//else {  this.reset() }
+	
+	if (directions=="down"&& this.y<420){
+		
+		this.y +=83;
+	}
+	if (directions=="left" && this.x > 0){
+		
+		this.x -=101;
+	}
+	
+	if (directions=="right" && this.x < 505){
+		//console.log(this.x);
+		this.x +=101;
+	}
+	
+};
+
+
+Player.prototype.reset = function() {	
+
+this.x=250
+this.y=420
+
+}
+
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-var Player = new Player();
+var player = new Player();
 
