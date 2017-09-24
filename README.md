@@ -1,6 +1,39 @@
 frontend-nanodegree-arcade-game
 ===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+Frogger Game: Getting Started
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+this is the classic arcade game inspired by the frogger game
+to start the game toy sholud open the folder "frontend-nanodegree-arcade-game" then open the "index.html" then it will open the game on the browser.
+
+Frogger Game Description
+
+-the game is just to make the player moves from the green grass the the blue water safely 
+-when the player touch the enemy allert massege will show to say " you lose"
+-when the player arrives to the water safely alert massege shows " congratiolations you win"
+
+table of content:-
+=========================================
+bugs       | the enemy player shoud avoid 
+=========================================
+boy        | player 
+=========================================
+gren grass | starting point
+=========================================
+blue water | the end and winning place 
+=========================================
+
+
+Basic Functionality
+
+-the user only can moves to the right, left ,down & up
+
+
+Additional Functionality
+
+- player score can be added & levels in the future 
+-also some sounds will make the game more funny 
+
+
+
+By: Amira Almurayshid
