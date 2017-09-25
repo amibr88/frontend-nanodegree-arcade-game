@@ -6,22 +6,24 @@ function getRandomInt(min, max) {
 // Enemies details
 var Enemy = function(x,y) {
 	
-	this.x=x
-	this.y=y
+	this.x=x;
+	this.y=y;
     this.sprite = 'images/enemy-bug.png';
-	this.width=50
-	this.height=50
+	this.width=50;
+	this.height=50;
+	this.speeds=(Math.random()*600)+100;
 };
 
 //enemy update
 Enemy.prototype.update = function(dt) {
-	
-	this.x=this.x+3
+	this.x=this.x+this.speeds*dt;
+  
 	if (this.x>ctx.canvas.width){
-		
+	this.speeds=(Math.random()*300)	+100;
 		// enemy movment
 			
-		this.x=getRandomInt(0,100)*-3
+	this.x=getRandomInt(0,100)*-3;
+	
 	}
 	
 	this.checkCollisions();
@@ -34,11 +36,11 @@ Enemy.prototype.checkCollisions = function() {
    this.x + this.width > player.x &&
    this.y < player.y + player.height &&
    this.height + this.y > player.y) {
-		alert("you lose")
+		alert("ههههههههههه خسرت يافاشل");
 		player.reset();
 		
 	}
-}
+};
 	
 //enemyies render
 Enemy.prototype.render = function() {
@@ -66,32 +68,36 @@ var allEnemies = [new Enemy(30,50),new Enemy(1,150),new Enemy(30,320),new Enemy(
 //player details
 var Player = function() {
 	
-	this.x=250
-	this.y=420
-    this.sprite = 'images/char-boy.png';
-	this.width=50
-	this.height=50
+	this.x=202;
+	this.y=420;
+  this.sprite = 'images/char-boy.png';
+	this.width=50;
+	this.height=50;
 };
 
 //player update status 
 Player.prototype.update = function(dt) {
 	
 	if (this.y < 10) {
-			alert("congratiolations you win")
-		this.reset();
+			alert("مبروووك ترا فزت باللعبه ");
+	this.reset();
+    
 	}
 };
 // the directions and arrows 
 
 Player.prototype.handleInput = function(directions) {	
+  
 	if (directions=="up"){
 		
 		this.y -=101;
 	}
+  
 	if (directions=="down"&& this.y<400){
 		
 		this.y +=83;
 	}
+  
 	if (directions=="left" && this.x > 50){
 		
 		this.x -=101;
@@ -107,12 +113,13 @@ Player.prototype.handleInput = function(directions) {
 /// the reset 
 Player.prototype.reset = function() {	
 
-this.x=250
-this.y=420
+this.x=250;
+this.y=420;
 
-}
+};
+
 //render 
 Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+ctx.drawImage(Resources.get(this.sprite),this.x,this.y);
 };
 var player = new Player();

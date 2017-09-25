@@ -4,7 +4,8 @@ frontend-nanodegree-arcade-game
 Frogger Game: Getting Started
 
 this is the classic arcade game inspired by the frogger game
-to start the game toy sholud open the folder "frontend-nanodegree-arcade-game" then open the "index.html" then it will open the game on the browser.
+to start the game toy sholud open the folder "frontend-nanodegree-arcade-game" then open the "index.html" then it will open the game on the browser
+link to the page "https://iaialm.github.io/frontend-nanodegree-arcade-game/"
 
 Frogger Game Description
 
