@@ -36,7 +36,11 @@ Enemy.prototype.checkCollisions = function() {
    this.x + this.width > player.x &&
    this.y < player.y + player.height &&
    this.height + this.y > player.y) {
+<<<<<<< HEAD
 		alert("ههههههههههه خسرت يافاشل");
+=======
+		alert("ههههههههههه خسرت يافاشل")
+>>>>>>> f288fb4e020fbefaefb8eb310f0ea38bc9a33592
 		player.reset();
 		
 	}
@@ -79,9 +83,14 @@ var Player = function() {
 Player.prototype.update = function(dt) {
 	
 	if (this.y < 10) {
+<<<<<<< HEAD
 			alert("مبروووك ترا فزت باللعبه ");
 	this.reset();
     
+=======
+			alert("مبرووووك ترا فزت باللعبه ")
+		this.reset();
+>>>>>>> f288fb4e020fbefaefb8eb310f0ea38bc9a33592
 	}
 };
 // the directions and arrows 
