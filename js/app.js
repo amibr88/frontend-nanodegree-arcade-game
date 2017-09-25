@@ -34,7 +34,7 @@ Enemy.prototype.checkCollisions = function() {
    this.x + this.width > player.x &&
    this.y < player.y + player.height &&
    this.height + this.y > player.y) {
-		alert("you lose")
+		alert("ههههههههههه خسرت يافاشل")
 		player.reset();
 		
 	}
@@ -77,7 +77,7 @@ var Player = function() {
 Player.prototype.update = function(dt) {
 	
 	if (this.y < 10) {
-			alert("congratiolations you win")
+			alert("مبرووووك ترا فزت باللعبه ")
 		this.reset();
 	}
 };
