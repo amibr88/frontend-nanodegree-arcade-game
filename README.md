@@ -37,4 +37,4 @@ Additional Functionality
 
 
 
-By: Amira Almurayshid
+By: Amira
